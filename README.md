@@ -7,26 +7,29 @@
 ```javascript
 class Me {
   constructor(){
-    this.name = "Cody Andersan";
+    this.name = 'Cody Andersan';
     this.age = 15;
-    this.pronouns = "he/him";
-    this.knows = [
-                  "Python",
-                  "JavaScript",
-                  "HTML/CSS",
-                  "Java"
-                 ]
+    this.pronouns = 'he/him';
+    this.stack = {
+      Python: ['Flask', 'PySimpleGUI', 'Web Scraping', 'Automation'],
+      JavaScript: ['ReactJS', 'ExpressJS'],
+      CSS: ['Vanilla', 'Tailwind', 'Bootstrap'],
+      Java: ['Basics'],
+      DBs: ['MongoDB']
+    };
     this.uses = [
-                 "Zorin OS",
-                 "VSCode",
-                 "Brave"
-                ]
+      'Linux Lite',
+      'Zorin OS',
+      'VSCode',
+      'Brave'
+    ];
   }
 }
+
 ```
 
 ### Profiles
 - <a href="https://codyandersan.github.io">My Website</a>
-- <a href="https://code.dcoder.tech/profile/codyandersan">Dcoder</a>
-- <a href="https://replit.com/@codyandersan">Replit</a>
 - <a href="https://discordapp.com/users/codyandersan">Discord</a>
+- <a href="https://replit.com/@codyandersan">Replit</a>
+- <a href="https://code.dcoder.tech/profile/codyandersan">Dcoder</a>
