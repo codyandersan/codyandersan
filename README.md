@@ -18,8 +18,7 @@ class Me {
       DBs: ['MongoDB']
     };
     this.uses = [
-      'Linux Lite',
-      'Zorin OS',
+      'MX Linux',
       'VSCode',
       'Brave'
     ];
