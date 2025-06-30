@@ -8,7 +8,7 @@
 class Me {
   constructor(){
     this.name = 'Cody Andersan';
-    this.age = 15;
+    this.age = 17;
     this.pronouns = 'he/him';
     this.stack = {
       Python: ['Flask', 'PySimpleGUI', 'Web Scraping', 'Automation'],
