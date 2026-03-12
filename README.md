@@ -11,16 +11,15 @@ class Me {
     this.age = 17;
     this.pronouns = 'he/him';
     this.stack = {
-      Python: ['Flask', 'PySimpleGUI', 'Web Scraping', 'Automation'],
+      Python: ['Flask', 'PyQt', 'Web Scraping', 'Automation'],
       JavaScript: ['ReactJS', 'ExpressJS'],
-      CSS: ['Vanilla', 'Tailwind', 'Bootstrap'],
+      CSS: ['Vanilla', 'Tailwind'],
       Java: ['Basics'],
-      DBs: ['MongoDB']
+      DBs: ['MongoDB', 'SQL']
     };
     this.uses = [
-      'MX Linux',
-      'VSCode',
-      'Brave'
+      'Fedora',
+      'MX Linux'
     ];
   }
 }
