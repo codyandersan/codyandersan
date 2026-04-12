@@ -7,7 +7,7 @@
 ```javascript
 class Me {
   constructor(){
-    this.name = 'Cody Andersan';
+    this.name = 'Prakhar Aditya Tripathi';
     this.age = 17;
     this.pronouns = 'he/him';
     this.stack = {
