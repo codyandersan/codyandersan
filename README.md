@@ -1,5 +1,5 @@
 
-## Hi,
+## Hi 👋,
 
 🌐 Portfolio: https://codyandersan.pages.dev  
 
