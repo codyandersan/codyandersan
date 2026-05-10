@@ -1,7 +1,7 @@
 
 ## Hi 👋,
 
-🌐 Portfolio: https://codyandersan.pages.dev  
+🌐 Portfolio: [prakhartri.me](https://prakhartri.me)
 
 ![](https://komarev.com/ghpvc/?username=codyandersan&color=blueviolet)
 
