@@ -28,7 +28,7 @@ class Me {
 ````
 
 ### Connect
-* Linkedin: [https://www.linkedin.com/in/prakhartri](https://www.linkedin.com/in/prakhartri)
-* GitHub: [https://github.com/codyandersan](https://github.com/codyandersan)
-* Discord: [https://discordapp.com/users/codyandersan](https://discordapp.com/users/codyandersan)
+* [Linkedin](https://www.linkedin.com/in/prakhartri)
+* [Mail](mailto:me@prakhartri.me)
+* [Telegram](https://t.me/codyandersan)
 
