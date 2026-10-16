@@ -65,12 +65,6 @@ def generate_svg(track):
       .top {{ fill: #181825; }}
       .mono {{ font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace; }}
       .sans {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }}
-      .bar {{ fill: #a6e3a1; transform-origin: bottom; animation: eq 0.9s ease-in-out infinite alternate; }}
-      .b1 {{ animation-duration: 0.55s; }}
-      .b2 {{ animation-duration: 0.85s; animation-delay: 0.15s; }}
-      .b3 {{ animation-duration: 0.65s; animation-delay: 0.3s; }}
-      .b4 {{ animation-duration: 0.95s; animation-delay: 0.1s; }}
-      @keyframes eq {{ 0% {{ transform: scaleY(0.25); }} 100% {{ transform: scaleY(1); }} }}
     </style>
   </defs>
 
@@ -91,17 +85,29 @@ def generate_svg(track):
   <text x="102" y="55" class="sans" font-size="15" font-weight="700" fill="#cdd6f4">{title}</text>
   <text x="102" y="75" class="sans" font-size="12.5" fill="#a6adc8">{artist}</text>
 
-  <!-- Progress Bar & Equalizer -->
+  <!-- Progress Bar -->
   <rect x="102" y="92" width="290" height="4" rx="2" fill="#313244"/>
   <rect x="102" y="92" width="165" height="4" rx="2" fill="#cba6f7"/>
   <text x="402" y="96" class="mono" font-size="10.5" fill="#6c7086">{duration_str}</text>
 
-  <!-- Animated Equalizer Bars -->
-  <g transform="translate(442, 42)">
-    <rect class="bar b1" x="0"  y="0" width="3.5" height="18" rx="1.5"/>
-    <rect class="bar b2" x="6"  y="0" width="3.5" height="18" rx="1.5"/>
-    <rect class="bar b3" x="12" y="0" width="3.5" height="18" rx="1.5"/>
-    <rect class="bar b4" x="18" y="0" width="3.5" height="18" rx="1.5"/>
+  <!-- Baseline-Locked Equalizer Bars (Bottom locked at y=58) -->
+  <g fill="#a6e3a1">
+    <rect x="438" y="48" width="3" height="10" rx="1.5">
+      <animate attributeName="y" values="52;45;50;43;52" dur="1.3s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="6;13;8;15;6" dur="1.3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="444" y="44" width="3" height="14" rx="1.5">
+      <animate attributeName="y" values="45;53;44;51;45" dur="1.1s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="13;5;14;7;13" dur="1.1s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="450" y="50" width="3" height="8" rx="1.5">
+      <animate attributeName="y" values="51;43;52;46;51" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="7;15;6;12;7" dur="1.5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="456" y="47" width="3" height="11" rx="1.5">
+      <animate attributeName="y" values="46;53;48;54;46" dur="1.2s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="12;5;10;4;12" dur="1.2s" repeatCount="indefinite"/>
+    </rect>
   </g>
 </svg>'''
 
@@ -110,7 +116,6 @@ def main():
     if not tracks:
         raise RuntimeError("No tracks returned from playlist.")
     
-    # Deterministic 3-hour slot + shuffle seed so every run cycles cleanly through the playlist
     slot = int(time.time() // 10800)
     rng = random.Random(slot)
     chosen = rng.choice(tracks)
