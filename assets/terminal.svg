@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 445" width="100%" xml:space="preserve">
+  <defs>
+    <style>
+      .bg { fill: #1e1e2e; stroke: #313244; stroke-width: 2; }
+      .header { fill: #181825; }
+      .divider { stroke: #313244; stroke-width: 1; }
+      .text { font-family: 'JetBrains Mono', 'Fira Code', 'DejaVu Sans Mono', 'Roboto Mono', 'SFMono-Regular', Menlo, Consolas, monospace; font-size: 13.5px; }
+      .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12.5px; fill: #6c7086; font-weight: 600; }
+      .user { fill: #a6e3a1; font-weight: bold; }
+      .path { fill: #89b4fa; font-weight: bold; }
+      .cmd { fill: #cdd6f4; }
+      .out { fill: #bac2de; }
+      .hl { fill: #cba6f7; font-weight: bold; }
+      .key { fill: #89dceb; }
+      .str { fill: #f9e2af; }
+      .dir { fill: #89b4fa; font-weight: bold; }
+      .comment { fill: #6c7086; font-style: italic; }
+      .cursor { fill: #cba6f7; }
+    </style>
+  </defs>
+
+  <!-- Main Window -->
+  <rect class="bg" x="1" y="1" width="818" height="443" rx="12" ry="12"/>
+
+  <!-- macOS Header Bar -->
+  <path class="header" d="M 13 2 H 807 A 11 11 0 0 1 818 13 V 38 H 2 V 13 A 11 11 0 0 1 13 2 Z"/>
+  <line class="divider" x1="2" y1="38" x2="818" y2="38"/>
+
+  <!-- Window Controls -->
+  <circle cx="24" cy="20" r="6.5" fill="#f38ba8"/>
+  <circle cx="44" cy="20" r="6.5" fill="#f9e2af"/>
+  <circle cx="64" cy="20" r="6.5" fill="#a6e3a1"/>
+  <text x="410" y="24" text-anchor="middle" class="title">codyandersan@github: ~/profile — zsh (82x24)</text>
+
+  <!-- Terminal Body -->
+  <g class="text" transform="translate(24, 68)">
+    <text x="0" y="0"><tspan class="user">codyandersan@github</tspan><tspan class="cmd">:</tspan><tspan class="path">~</tspan><tspan class="cmd">$ whoami --verbose</tspan></text>
+    <text x="0" y="24" class="out"><tspan class="hl">Prakhar Aditya Tripathi</tspan> • Student • Developer • Linux Nerd</text>
+    <text x="0" y="44" class="out">Building tools, autonomous scripts and web apps that actually work.</text>
+
+    <text x="0" y="80"><tspan class="user">codyandersan@github</tspan><tspan class="cmd">:</tspan><tspan class="path">~</tspan><tspan class="cmd">$ cat /etc/stack.toml</tspan></text>
+    <text x="0" y="104" class="out"><tspan class="hl">[languages]</tspan>     <tspan class="key">core</tspan> = [<tspan class="str">"Python"</tspan>, <tspan class="str">"JavaScript"</tspan>, <tspan class="str">"Bash"</tspan>, <tspan class="str">"Java"</tspan>]</text>
+    <text x="0" y="124" class="out"><tspan class="hl">[web_stack]</tspan>     <tspan class="key">apps</tspan> = [<tspan class="str">"React"</tspan>, <tspan class="str">"NextJS"</tspan>, <tspan class="str">"Express"</tspan>, <tspan class="str">"Tailwind"</tspan>, <tspan class="str">"CF Workers"</tspan>]</text>
+    <text x="0" y="144" class="out"><tspan class="hl">[systems]</tspan>       <tspan class="key">env</tspan>  = [<tspan class="str">"Linux"</tspan>, <tspan class="str">"Shizuku"</tspan>, <tspan class="str">"Automation"</tspan>]</text>
+    <text x="0" y="164" class="out"><tspan class="hl">[data_labs]</tspan>     <tspan class="key">tech</tspan> = [<tspan class="str">"MongoDB"</tspan>, <tspan class="str">"MySQL"</tspan>, <tspan class="str">"Qiskit"</tspan>]</text>
+    <text x="0" y="184" class="out"><tspan class="hl">[daily_driver]</tspan>  <tspan class="key">gear</tspan> = [<tspan class="str">"Debian"</tspan>, <tspan class="str">"VS Code"</tspan>, <tspan class="str">"Vivaldi"</tspan>]</text>
+
+    <text x="0" y="220"><tspan class="user">codyandersan@github</tspan><tspan class="cmd">:</tspan><tspan class="path">~</tspan><tspan class="cmd">$ ls -la ~/featured-builds/</tspan></text>
+    <text x="0" y="244" class="out">drwxr-xr-x  <tspan class="dir">TermuxAgent/</tspan>  <tspan class="comment"># Android alternative to Claude Code supercharged with Shizuku</tspan></text>
+    <text x="0" y="264" class="out">drwxr-xr-x  <tspan class="dir">TuneStation/</tspan>  <tspan class="comment"># Client side React &amp; Tailwind music player</tspan></text>
+    <text x="0" y="284" class="out">drwxr-xr-x  <tspan class="dir">MetaEdit/</tspan>     <tspan class="comment"># Flask web app to auto fetch and embed audio metadata</tspan></text>
+    <text x="0" y="304" class="out">drwxr-xr-x  <tspan class="dir">ColabBot/</tspan>     <tspan class="comment"># Headless GitHub &amp; Drive sync automation</tspan></text>
+
+    <!-- Prompt + cursor live in the same text run, so the cursor always follows the last character -->
+    <text x="0" y="340"><tspan class="user">codyandersan@github</tspan><tspan class="cmd">:</tspan><tspan class="path">~</tspan><tspan class="cmd">$ </tspan><tspan class="cursor">█<animate attributeName="fill-opacity" values="1;0" dur="1.1s" calcMode="discrete" repeatCount="indefinite"/></tspan></text>
+  </g>
+</svg>
