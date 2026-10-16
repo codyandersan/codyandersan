@@ -6,21 +6,8 @@
 
   <!-- Row 1: High-Contrast Connect & Views Badges -->
   <p align="center">
-    <a href="https://prakhartri.me">
-      <img src="https://img.shields.io/badge/PORTFOLIO-prakhartri.me-5b21b6?style=for-the-badge&logo=vercel&logoColor=cba6f7&labelColor=181825" alt="Portfolio" />
-    </a>&nbsp;&nbsp;
-    <a href="https://www.linkedin.com/in/prakhartri/">
-      <img src="https://img.shields.io/badge/LINKEDIN-CONNECT-1d4ed8?style=for-the-badge&logo=linkedin&logoColor=89b4fa&labelColor=181825" alt="LinkedIn" />
-    </a>&nbsp;&nbsp;
-    <a href="https://t.me/codyandersan">
-      <img src="https://img.shields.io/badge/TELEGRAM-CHAT-0369a1?style=for-the-badge&logo=telegram&logoColor=89dceb&labelColor=181825" alt="Telegram" />
-    </a>&nbsp;&nbsp;
-    <a href="mailto:me@prakhartri.me">
-      <img src="https://img.shields.io/badge/MAIL-PING-be123c?style=for-the-badge&logo=protonmail&logoColor=f38ba8&labelColor=181825" alt="Mail" />
-    </a>&nbsp;&nbsp;
-    <img src="https://komarev.com/ghpvc/?username=codyandersan&style=for-the-badge&color=047857&labelColor=181825&label=VIEWS" alt="Profile views" />
-  </p>
-
+<a href="https://prakhartri.me"><img src="https://img.shields.io/badge/PORTFOLIO-prakhartri.me-5b21b6?style=for-the-badge&logo=vercel&logoColor=cba6f7&labelColor=181825" alt="Portfolio" /></a>&nbsp;&nbsp;<a href="https://www.linkedin.com/in/prakhartri/"><img src="https://img.shields.io/badge/LINKEDIN-CONNECT-1d4ed8?style=for-the-badge&logo=linkedin&logoColor=89b4fa&labelColor=181825" alt="LinkedIn" /></a>&nbsp;&nbsp;<a href="https://t.me/codyandersan"><img src="https://img.shields.io/badge/TELEGRAM-CHAT-0369a1?style=for-the-badge&logo=telegram&logoColor=89dceb&labelColor=181825" alt="Telegram" /></a>&nbsp;&nbsp;<a href="mailto:me@prakhartri.me"><img src="https://img.shields.io/badge/MAIL-PING-be123c?style=for-the-badge&logo=protonmail&logoColor=f38ba8&labelColor=181825" alt="Mail" /></a>&nbsp;&nbsp;<img src="https://komarev.com/ghpvc/?username=codyandersan&style=for-the-badge&color=047857&labelColor=181825&label=VIEWS" alt="Profile views" />
+</p>
   <br/>
 
   <!-- Tech Stack Row 1: Core & Web -->
