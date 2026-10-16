@@ -46,16 +46,16 @@
 
   <!-- Live Cycling Spotify Playlist Widget -->
   <a href="https://open.spotify.com/playlist/3QIalaAOvvSPAQ9GT967nL">
-    <img src="https://raw.githubusercontent.com/codyandersan/codyandersan/output/spotify.svg" alt="Spotify Playlist Rotator" width="480" />
+    <img src="https://raw.githubusercontent.com/codyandersan/codyandersan/output/spotify.svg?v=2" alt="Spotify Playlist Rotator" width="480" />
   </a>
 
   <br/><br/>
 
   <!-- Theme-Aware Contribution Snake -->
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/codyandersan/codyandersan/output/snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/codyandersan/codyandersan/output/snake-light.svg" />
-    <img alt="github contribution snake" src="https://raw.githubusercontent.com/codyandersan/codyandersan/output/snake-dark.svg" width="100%" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/codyandersan/codyandersan/output/snake-dark.svg?v=2" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/codyandersan/codyandersan/output/snake-light.svg?v=2" />
+    <img alt="github contribution snake" src="https://raw.githubusercontent.com/codyandersan/codyandersan/output/snake-dark.svg?v=2" width="100%" />
   </picture>
 
 </div>
