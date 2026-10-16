@@ -1,6 +1,6 @@
 <div align="center">
   <!-- Scalable macOS Terminal Window -->
-  <img src="./assets/terminal.svg" alt="codyandersan terminal" width="100%" />
+  <img src="./assets/terminal.svg?v=2" alt="codyandersan terminal" width="100%" />
 
   <br/><br/>
 
