@@ -31,57 +31,60 @@
   <circle cx="24" cy="20" r="6.5" fill="#f38ba8"/>
   <circle cx="44" cy="20" r="6.5" fill="#f9e2af"/>
   <circle cx="64" cy="20" r="6.5" fill="#a6e3a1"/>
-  <text x="410" y="24" text-anchor="middle" class="title">codyandersan@linux: ~/profile — zsh (82x24)</text>
+  <text x="410" y="24" text-anchor="middle" class="title">codyandersan@github: ~/profile — zsh (82x24)</text>
 
   <!-- Terminal Body -->
   <g class="text" transform="translate(24, 68)">
     <!-- Command 1: whoami -->
     <text x="0" y="0">
-      <tspan class="user">codyandersan@linux</tspan><tspan class="cmd">:</tspan><tspan class="path">~</tspan><tspan class="cmd">$ whoami --verbose</tspan>
+      <tspan class="user">codyandersan@github</tspan><tspan class="cmd">:</tspan><tspan class="path">~</tspan><tspan class="cmd">$ whoami --verbose</tspan>
     </text>
     <text x="0" y="24" class="out">
-      <tspan class="hl">Prakhar Aditya Tripathi</tspan> • Student &amp; Developer
+      <tspan class="hl">Prakhar Aditya Tripathi</tspan> • Student • Developer • Linux Nerd
     </text>
-    <text x="0" y="44" class="out">Building tools, autonomous scripts, and web apps that actually work.</text>
+    <text x="0" y="44" class="out">Building tools, autonomous scripts and web apps that actually work.</text>
 
     <!-- Command 2: stack.toml -->
     <text x="0" y="80">
-      <tspan class="user">codyandersan@linux</tspan><tspan class="cmd">:</tspan><tspan class="path">~</tspan><tspan class="cmd">$ cat /etc/stack.toml</tspan>
+      <tspan class="user">codyandersan@github</tspan><tspan class="cmd">:</tspan><tspan class="path">~</tspan><tspan class="cmd">$ cat /etc/stack.toml</tspan>
     </text>
     <text x="0" y="104" class="out">
-      <tspan class="hl">[languages]</tspan>   <tspan class="key">core</tspan> = [<tspan class="str">"Python"</tspan>, <tspan class="str">"JavaScript"</tspan>, <tspan class="str">"Bash"</tspan>, <tspan class="str">"SQL"</tspan>]
+      <tspan class="hl">[languages]</tspan>   <tspan class="key">core</tspan> = [<tspan class="str">"Python"</tspan>, <tspan class="str">"JavaScript"</tspan>, <tspan class="str">"Bash"</tspan>, <tspan class="str">"Java"</tspan>]
     </text>
     <text x="0" y="124" class="out">
-      <tspan class="hl">[web_stack]</tspan>   <tspan class="key">apps</tspan> = [<tspan class="str">"React"</tspan>, <tspan class="str">"Node.js"</tspan>, <tspan class="str">"Express"</tspan>, <tspan class="str">"Tailwind"</tspan>, <tspan class="str">"CF Workers"</tspan>]
+      <tspan class="hl">[web_stack]</tspan>   <tspan class="key">apps</tspan> = [<tspan class="str">"React"</tspan>, <tspan class="str">"NextJS"</tspan>, <tspan class="str">"Express"</tspan>, <tspan class="str">"Tailwind"</tspan>, <tspan class="str">"CF Workers"</tspan>]
     </text>
     <text x="0" y="144" class="out">
-      <tspan class="hl">[systems]</tspan>     <tspan class="key">env</tspan>  = [<tspan class="str">"Linux"</tspan>, <tspan class="str">"Termux"</tspan>, <tspan class="str">"Shizuku"</tspan>, <tspan class="str">"PyQt"</tspan>, <tspan class="str">"Automation"</tspan>]
+      <tspan class="hl">[systems]</tspan>     <tspan class="key">env</tspan>  = [<tspan class="str">"Linux"</tspan>, <tspan class="str">"Shizuku"</tspan>, <tspan class="str">"Automation"</tspan>]
     </text>
     <text x="0" y="164" class="out">
-      <tspan class="hl">[data_labs]</tspan>   <tspan class="key">tech</tspan> = [<tspan class="str">"MongoDB"</tspan>, <tspan class="str">"MySQL"</tspan>, <tspan class="str">"Qiskit"</tspan>, <tspan class="str">"PennyLane"</tspan>]
+      <tspan class="hl">[data_labs]</tspan>   <tspan class="key">tech</tspan> = [<tspan class="str">"MongoDB"</tspan>, <tspan class="str">"MySQL"</tspan>, <tspan class="str">"Qiskit"</tspan>]
+    </text>
+    <text x="0" y="184" class="out">
+      <tspan class="hl">[daily_driver]</tspan>   <tspan class="key">gear</tspan> = [<tspan class="str">"Debian"</tspan>, <tspan class="str">"VS Code"</tspan>, <tspan class="str">"Vivaldi"</tspan>]
     </text>
 
     <!-- Command 3: featured builds -->
-    <text x="0" y="200">
-      <tspan class="user">codyandersan@linux</tspan><tspan class="cmd">:</tspan><tspan class="path">~</tspan><tspan class="cmd">$ ls -la ~/featured-builds/</tspan>
-    </text>
-    <text x="0" y="224" class="out">
-      drwxr-xr-x  <tspan class="dir">TermuxAgent/</tspan>     <tspan class="comment"># AI Android CLI file manager via Shizuku</tspan>
+    <text x="0" y="220">
+      <tspan class="user">codyandersan@github</tspan><tspan class="cmd">:</tspan><tspan class="path">~</tspan><tspan class="cmd">$ ls -la ~/featured-builds/</tspan>
     </text>
     <text x="0" y="244" class="out">
-      drwxr-xr-x  <tspan class="dir">TuneStation/</tspan>     <tspan class="comment"># Client-side React 18 &amp; Tailwind music player</tspan>
+      drwxr-xr-x  <tspan class="dir">TermuxAgent/</tspan>     <tspan class="comment"># Android alternative to Claude Code supercharged with Shizuku</tspan>
     </text>
     <text x="0" y="264" class="out">
-      drwxr-xr-x  <tspan class="dir">ChemBot/</tspan>         <tspan class="comment"># Edge-deployed AI assistant on Cloudflare Workers</tspan>
+      drwxr-xr-x  <tspan class="dir">TuneStation/</tspan>     <tspan class="comment"># Client side React &amp; Tailwind music player</tspan>
     </text>
     <text x="0" y="284" class="out">
-      drwxr-xr-x  <tspan class="dir">Colab-Tools/</tspan>     <tspan class="comment"># Headless GitHub &amp; Drive sync automation</tspan>
+      drwxr-xr-x  <tspan class="dir">MetaEdit/</tspan>         <tspan class="comment"># Flask web app to auto fetch and embed audio metadata</tspan>
+    </text>
+    <text x="0" y="304" class="out">
+      drwxr-xr-x  <tspan class="dir">ColabBot/</tspan>     <tspan class="comment"># Headless GitHub &amp; Drive sync automation</tspan>
     </text>
 
     <!-- Active Prompt + Blinking Cursor -->
-    <text x="0" y="320">
-      <tspan class="user">codyandersan@linux</tspan><tspan class="cmd">:</tspan><tspan class="path">~</tspan><tspan class="cmd">$</tspan>
+    <text x="0" y="340">
+      <tspan class="user">codyandersan@github</tspan><tspan class="cmd">:</tspan><tspan class="path">~</tspan><tspan class="cmd">$</tspan>
     </text>
-    <rect class="cursor" x="166" y="306" width="9" height="17"/>
+    <rect class="cursor" x="166" y="32" width="9" height="17"/>
   </g>
 </svg>
