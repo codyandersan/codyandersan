@@ -7,7 +7,7 @@ import re
 import time
 import urllib.request
 
-PLAYLIST_ID = "3QIalaAOvvSPAQ9GT967nL"
+PLAYLIST_ID = "37i9dQZF1EpwtGwNxZHUxC"
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
 }
@@ -18,7 +18,7 @@ TIME_X = 384                         # left edge of the "m:ss / m:ss" timer
 CELL = 6.4                           # width of one monospace digit cell
 LINE = 14                            # vertical pitch of a digit strip
 BASE_Y = 96                          # text baseline of the timer
-FALLBACK_FRAC = 0.45                 # what non-animating viewers see (45% played)
+MAX_START_FRAC = 0.6                 # first play begins at a random point in 0..60% of the song
 
 
 def fetch_url(url):
@@ -48,7 +48,7 @@ def truncate(text, limit):
     return text if len(text) <= limit else text[: limit - 1].rstrip() + "…"
 
 
-def rolling_digit(idx, cx, digit_at, dur, fallback_t):
+def rolling_digit(idx, cx, digit_at, dur, start):
     """One digit of the ticking timer.
 
     The digits 0..n are stacked vertically inside a small clip window and the
@@ -73,37 +73,36 @@ def rolling_digit(idx, cx, digit_at, dur, fallback_t):
         for i in range(top + 1)
     )
     values = ";".join(f"0 {-v * LINE}" for _, v in steps)
-    key_times = ";".join(f"{t / dur:.6f}" for t, _ in steps)
-    rest = -digit_at(fallback_t) * LINE  # static frame if SMIL isn't supported
+    key_times = ";".join(f"{t / dur:.9f}" for t, _ in steps)
+    rest = -digit_at(start) * LINE  # static frame if SMIL isn't supported
 
     return (
         f'<clipPath id="tick{idx}"><rect x="{cx - CELL / 2 - 0.6:.1f}" y="86.5" width="{CELL + 1.2:.1f}" height="13"/></clipPath>'
         f'<g clip-path="url(#tick{idx})"><g transform="translate(0 {rest})">{lines}'
         f'<animateTransform attributeName="transform" type="translate" calcMode="discrete" '
-        f'values="{values}" keyTimes="{key_times}" dur="{dur}s" repeatCount="indefinite"/>'
+        f'values="{values}" keyTimes="{key_times}" begin="-{start}s" dur="{dur}s" repeatCount="indefinite"/>'
         f'</g></g>'
     )
 
 
-def build_timer(dur, total_str):
+def build_timer(dur, total_str, start):
     """Returns SVG for an 'm:ss / total' timer that counts up once per second."""
-    fallback_t = int(dur * FALLBACK_FRAC)
     n_min = len(str((dur - 1) // 60))  # number of minute digits needed
     parts, idx, x = [], 0, TIME_X
 
     for k in range(n_min):
         div = 10 ** (n_min - 1 - k)
-        parts.append(rolling_digit(idx, x + CELL / 2, lambda t, d=div: (t // 60 // d) % 10, dur, fallback_t))
+        parts.append(rolling_digit(idx, x + CELL / 2, lambda t, d=div: (t // 60 // d) % 10, dur, start))
         idx += 1
         x += CELL
 
     parts.append(f'<text x="{x + 2:.1f}" y="{BASE_Y}" text-anchor="middle">:</text>')
     x += 4
 
-    parts.append(rolling_digit(idx, x + CELL / 2, lambda t: (t % 60) // 10, dur, fallback_t))
+    parts.append(rolling_digit(idx, x + CELL / 2, lambda t: (t % 60) // 10, dur, start))
     idx += 1
     x += CELL
-    parts.append(rolling_digit(idx, x + CELL / 2, lambda t: t % 10, dur, fallback_t))
+    parts.append(rolling_digit(idx, x + CELL / 2, lambda t: t % 10, dur, start))
     x += CELL
 
     return (
@@ -130,8 +129,11 @@ def generate_svg(track):
         else '<rect x="18" y="36" width="68" height="68" rx="8" fill="#313244"/>'
     )
 
-    timer = build_timer(dur, duration_str)
-    fb_w = BAR_W * FALLBACK_FRAC
+    # First play starts part-way through so it doesn't look like the song began at page load.
+    # Negative `begin` = "this animation started N seconds ago"; later loops run from 0:00.
+    start = random.randint(0, int(dur * MAX_START_FRAC))
+    timer = build_timer(dur, duration_str, start)
+    fb_w = BAR_W * start / dur
     fb_x = BAR_X + fb_w
     bar_end = BAR_X + BAR_W
 
@@ -164,28 +166,21 @@ def generate_svg(track):
     spotifyd --playlist <tspan fill="#cba6f7">{PLAYLIST_ID[:10]}…</tspan> <tspan fill="#6c7086">[rotates 3h]</tspan><tspan fill="#a6e3a1">_<animate attributeName="fill-opacity" values="1;0" keyTimes="0;0.5" calcMode="discrete" dur="1.1s" repeatCount="indefinite"/></tspan>
   </text>
 
-  <!-- Album Cover + soft breathing ring -->
+  <!-- Album Cover -->
   {cover_element}
-  <rect x="17" y="35" width="70" height="70" rx="9" fill="none" stroke="#cba6f7" stroke-width="1.5" opacity="0">
-    <animate attributeName="opacity" values="0;0.55;0" dur="3.2s" repeatCount="indefinite"/>
-  </rect>
 
   <!-- Track Metadata -->
   <text x="102" y="55" class="sans" font-size="15" font-weight="700" fill="#cdd6f4">{title}</text>
   <text x="102" y="75" class="sans" font-size="12.5" fill="#a6adc8">{artist}</text>
 
-  <!-- Progress Bar: fills over the track's real duration, then loops -->
+  <!-- Progress Bar: fills over the track's real duration, then restarts from 0:00 -->
   <rect x="{BAR_X}" y="{BAR_Y}" width="{BAR_W}" height="4" rx="2" fill="#313244"/>
   <rect x="{BAR_X}" y="{BAR_Y}" width="{fb_w:.1f}" height="4" rx="2" fill="url(#bar-grad)">
-    <animate attributeName="width" from="0" to="{BAR_W}" dur="{dur}s" repeatCount="indefinite"/>
+    <animate attributeName="width" from="0" to="{BAR_W}" begin="-{start}s" dur="{dur}s" repeatCount="indefinite"/>
   </rect>
-  <!-- Playhead: pulsing halo + knob riding the end of the fill -->
-  <circle cx="{fb_x:.1f}" cy="{BAR_Y + 2}" r="6" fill="#cba6f7" opacity="0.25">
-    <animate attributeName="cx" from="{BAR_X}" to="{bar_end}" dur="{dur}s" repeatCount="indefinite"/>
-    <animate attributeName="r" values="4.5;8;4.5" dur="1.6s" repeatCount="indefinite"/>
-  </circle>
+  <!-- Playhead -->
   <circle cx="{fb_x:.1f}" cy="{BAR_Y + 2}" r="3.5" fill="#cdd6f4">
-    <animate attributeName="cx" from="{BAR_X}" to="{bar_end}" dur="{dur}s" repeatCount="indefinite"/>
+    <animate attributeName="cx" from="{BAR_X}" to="{bar_end}" begin="-{start}s" dur="{dur}s" repeatCount="indefinite"/>
   </circle>
 
   <!-- Ticking timer: elapsed counts up every second / total -->
@@ -229,4 +224,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
+        
