@@ -23,7 +23,6 @@ jobs:
       - name: Generate Spotify Playlist Card
         run: python3 scripts/spotify_card.py
 
-
       - name: Generate Catppuccin Contribution Snake
         uses: Platane/snk/svg-only@v3
         with:
@@ -39,3 +38,20 @@ jobs:
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Purge GitHub Camo Image Cache
+        run: |
+          sleep 5
+          URLS=(
+            "https://github.com/${{ github.repository_owner }}"
+            "https://github.com/${{ github.repository }}"
+            "https://github.com/${{ github.repository }}/tree/dev"
+          )
+          for page in "${URLS[@]}"; do
+            CAMO_LINKS=$(curl -sL "$page" | grep -oE 'https://camo\.githubusercontent\.com/[a-f0-9]+/[a-f0-9]+' | sort -u || true)
+            for camo in $CAMO_LINKS; do
+              echo "Purging $camo"
+              curl -s -X PURGE "$camo" > /dev/null
+            done
+          done
+          
