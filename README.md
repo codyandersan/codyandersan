@@ -30,10 +30,9 @@
   </p>
 
   <br/>
-
   <!-- Live Cycling Spotify Playlist Widget -->
-  <a href="https://open.spotify.com/playlist/3QIalaAOvvSPAQ9GT967nL">
-    <img src="https://raw.githubusercontent.com/codyandersan/codyandersan/output/spotify.svg?v=2" alt="Spotify Playlist Rotator" width="480" />
+  <a href="https://open.spotify.com/playlist/37i9dQZF1EpwtGwNxZHUxC">
+    <img src="https://raw.githubusercontent.com/codyandersan/codyandersan/output/spotify.svg?v=4" alt="Spotify Playlist Rotator" width="480" />
   </a>
 
   <br/><br/>
