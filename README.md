@@ -6,31 +6,31 @@
 
   <!-- Row 1: High-Contrast Connect Badges -->
   <p align="center">
-    <a href="https://prakhartri.me"><img src="https://img.shields.io/badge/PORTFOLIO-prakhartri.me-5b21b6.svg?style=for-the-badge&logo=vercel&logoColor=cba6f7&labelColor=181825" alt="Portfolio" /></a>&nbsp;
-    <a href="https://www.linkedin.com/in/prakhartri/"><img src="https://img.shields.io/badge/LINKEDIN-CONNECT-1d4ed8.svg?style=for-the-badge&logo=linkedin&logoColor=89b4fa&labelColor=181825" alt="LinkedIn" /></a>&nbsp;
-    <a href="https://t.me/codyandersan"><img src="https://img.shields.io/badge/TELEGRAM-CHAT-0369a1.svg?style=for-the-badge&logo=telegram&logoColor=89dceb&labelColor=181825" alt="Telegram" /></a>&nbsp;
-    <a href="mailto:me@prakhartri.me"><img src="https://img.shields.io/badge/MAIL-PING-be123c.svg?style=for-the-badge&logo=protonmail&logoColor=f38ba8&labelColor=181825" alt="Mail" /></a>
+    <a href="https://prakhartri.me"><img src="./assets/badges/portfolio.svg" alt="Portfolio" /></a>&nbsp;
+    <a href="https://www.linkedin.com/in/prakhartri/"><img src="./assets/badges/linkedin.svg" alt="LinkedIn" /></a>&nbsp;
+    <a href="https://t.me/codyandersan"><img src="./assets/badges/telegram.svg" alt="Telegram" /></a>&nbsp;
+    <a href="mailto:me@prakhartri.me"><img src="./assets/badges/mail.svg" alt="Mail" /></a>
   </p>
 
   <br/>
 
   <!-- Tech Stack Row 1: Core & Web -->
   <p align="center">
-    <img src="https://img.shields.io/badge/Python-24273a.svg?style=for-the-badge&logo=python&logoColor=f9e2af" height="26" alt="Python" />&nbsp;
-    <img src="https://img.shields.io/badge/JavaScript-24273a.svg?style=for-the-badge&logo=javascript&logoColor=f9e2af" height="26" alt="JavaScript" />&nbsp;
-    <img src="https://img.shields.io/badge/React-24273a.svg?style=for-the-badge&logo=react&logoColor=89dceb" height="26" alt="React" />&nbsp;
-    <img src="https://img.shields.io/badge/Node.js-24273a.svg?style=for-the-badge&logo=nodedotjs&logoColor=a6e3a1" height="26" alt="Node.js" />&nbsp;
-    <img src="https://img.shields.io/badge/Express-24273a.svg?style=for-the-badge&logo=express&logoColor=cdd6f4" height="26" alt="Express" />&nbsp;
-    <img src="https://img.shields.io/badge/Tailwind_CSS-24273a.svg?style=for-the-badge&logo=tailwindcss&logoColor=89dceb" height="26" alt="Tailwind" />
+    <img src="./assets/badges/python.svg" height="26" alt="Python" />&nbsp;
+    <img src="./assets/badges/javascript.svg" height="26" alt="JavaScript" />&nbsp;
+    <img src="./assets/badges/react.svg" height="26" alt="React" />&nbsp;
+    <img src="./assets/badges/node_js.svg" height="26" alt="Node.js" />&nbsp;
+    <img src="./assets/badges/express.svg" height="26" alt="Express" />&nbsp;
+    <img src="./assets/badges/tailwind_css.svg" height="26" alt="Tailwind" />
   </p>
 
   <!-- Tech Stack Row 2: Systems, Cloud & Quantum -->
   <p align="center">
-    <img src="https://img.shields.io/badge/Linux-24273a.svg?style=for-the-badge&logo=linux&logoColor=f9e2af" height="26" alt="Linux" />&nbsp;
-    <img src="https://img.shields.io/badge/Bash-24273a.svg?style=for-the-badge&logo=gnubash&logoColor=a6e3a1" height="26" alt="Bash" />&nbsp;
-    <img src="https://img.shields.io/badge/MongoDB-24273a.svg?style=for-the-badge&logo=mongodb&logoColor=a6e3a1" height="26" alt="MongoDB" />&nbsp;
-    <img src="https://img.shields.io/badge/Cloudflare_Workers-24273a.svg?style=for-the-badge&logo=cloudflare&logoColor=fab387" height="26" alt="Cloudflare Workers" />&nbsp;
-    <img src="https://img.shields.io/badge/Qiskit-24273a.svg?style=for-the-badge&logo=qiskit&logoColor=cba6f7" height="26" alt="Qiskit" />
+    <img src="./assets/badges/linux.svg" height="26" alt="Linux" />&nbsp;
+    <img src="./assets/badges/bash.svg" height="26" alt="Bash" />&nbsp;
+    <img src="./assets/badges/mongodb.svg" height="26" alt="MongoDB" />&nbsp;
+    <img src="./assets/badges/cloudflare_workers.svg" height="26" alt="Cloudflare Workers" />&nbsp;
+    <img src="./assets/badges/qiskit.svg" height="26" alt="Qiskit" />
   </p>
 
   <br/>
